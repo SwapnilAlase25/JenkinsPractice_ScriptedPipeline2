@@ -1,7 +1,7 @@
 
-pipelineJob('pipelinejob1'){
+pipelineJob('scriptedpipelinejob1'){
   triggers {
-    upstream('seed_job', 'SUCCESS')
+    upstream('ScriptedPipeline_with_Git_SCM2', 'SUCCESS')
   }
   
 definition { cps {script("""
@@ -26,9 +26,9 @@ node {
  }}
 }
 
-pipelineJob('pipelinejob2'){
+pipelineJob('scriptedpipelinejob2'){
   triggers {
-    upstream('seed_job', 'SUCCESS')
+    upstream('ScriptedPipeline_with_Git_SCM2', 'SUCCESS')
   }
   
 definition { cps {script("""
@@ -51,9 +51,9 @@ node {
   }}
 }
 
-pipelineJob('pipelinejob3'){
+pipelineJob('scriptedpipelinejob3'){
   triggers {
-    upstream('seed_job', 'SUCCESS')
+    upstream('ScriptedPipeline_with_Git_SCM2', 'SUCCESS')
   }
   
 definition { cps {script("""
