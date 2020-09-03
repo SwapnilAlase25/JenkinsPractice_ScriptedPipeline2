@@ -1,33 +1,25 @@
 
-
 pipelineJob('pipelinejob1'){
   triggers {
     upstream('seed_job', 'SUCCESS')
   }
   
 definition { cps {script("""
-pipeline {
-    agent any
-    stages {
-        stage('Hey') {
-              steps {
-               sh 'echo Hey!!'
+
+node {
+        stage('test1') {
+                 echo "Testing C files ...."
               }
+		
+		stage('test2') {
+                 echo "Testing C++ files ...."            
         	}
 		
-		stage('Hello') {
-              steps {
-               sh 'echo hello!!'
+		stage('test3') {
+                 echo "Testing Java files ...."
               }
-        	}
-		
-		stage('Hii') {
-              steps {
-               sh 'echo hii!!'
-              }
-        	}
-		}
-	 }
+  	 }
+
 
 """)
    sandbox(true)
@@ -40,28 +32,20 @@ pipelineJob('pipelinejob2'){
   }
   
 definition { cps {script("""
-pipeline {
-    agent any
-    stages {
-        stage('whatsup') {
-              steps {
-               sh 'echo Whatsup'
+
+node {
+        stage('deploy1') {
+                 echo "Deploying C files ...."
               }
-        	}				
-		stage('How are you') {
-              steps {
-               sh 'echo how are you?'
-              }
+		
+		stage('deploy2') {
+                 echo "Deploying C++ files ...."            
         	}
 		
-		stage('whats your name') {
-              steps {
-               sh 'echo whats your name?'
+		stage('deploy3') {
+                 echo "Deploying Java files ...."
               }
-        	}
-		
-		}
-	}
+  	 }
 """)
   sandbox(true)               
   }}
@@ -73,28 +57,19 @@ pipelineJob('pipelinejob3'){
   }
   
 definition { cps {script("""
-pipeline {
-    agent any
-    stages {
-        stage('nice meeting you') {
-              steps {
-               sh 'echo nice meeting you'
+node {
+        stage('deploy1') {
+                 echo "Deploying C files ...."
               }
-        	}
-		stage('Take care') {
-              steps {
-               sh 'echo take care'
-              }
+		
+		stage('deploy2') {
+                 echo "Deploying C++ files ...."            
         	}
 		
-		stage('bye') {
-              steps {
-               sh 'echo bye'
+		stage('deploy3') {
+                 echo "Deploying Java files ...."
               }
-        	}
-		
-		}
-	}
+  	 }
 """)
  sandbox(true)               
  }}
