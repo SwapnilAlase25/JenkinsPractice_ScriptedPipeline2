@@ -22,7 +22,7 @@ node {
 
 
 """)
-   sandbox(true)
+   
  }}
 }
 
@@ -47,7 +47,7 @@ node {
               }
   	 }
 """)
-  sandbox(true)               
+               
   }}
 }
 
@@ -71,6 +71,6 @@ node {
               }
   	 }
 """)
- sandbox(true)               
+               
  }}
 }
