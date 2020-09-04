@@ -13,7 +13,7 @@ node() {
             ansiColor('xterm') {
                   checkout scm
             
-            jobDsl ignoreExisting: true, 
+            jobDsl ignoreExisting: 'true', 
                 additionalClasspath: 'utils', 
                 lookupStrategy: 'SEED_JOB', targets: 'jobs/build_job.groovy'
         }
