@@ -1,15 +1,3 @@
-node() {
-     checkout scm
-        
-        jobDsl ignoreExisting: true,
-               lookupStrategy: 'SEED_JOB',
-               targets: ['build.groovy']
-}
-
-
-
-
-
 /*pipelineJob('Build-Job') {
     definition {
         cpsScm {
@@ -18,7 +6,7 @@ node() {
         }
     }
 }*/
-/*
+
 pipelineJob('build-job') {
   definition {
     cps {
@@ -42,7 +30,7 @@ pipelineJob('build-job') {
   }
 }
 
-*/
+
 /*
 pipelineJob('Testing-job'){
 
