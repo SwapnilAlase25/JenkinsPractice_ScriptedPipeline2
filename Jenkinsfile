@@ -1,5 +1,5 @@
 //Jenkinsfile for seed job
-#!groovy
+
  
 /*
 properties([
@@ -20,6 +20,9 @@ node {
     }
 }
 */
+
+#!groovy
+
 node() {
      checkout scm
         
