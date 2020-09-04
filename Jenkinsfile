@@ -8,12 +8,12 @@ pipelineJob('example') {
     }
 }
 */
- node {
+
 pipelineJob('job-name') {
   definition {
     cps {
       script('''
- 
+  node {
         stage('build1') {
                  echo "Building C files ...."
               }
@@ -25,13 +25,13 @@ pipelineJob('job-name') {
 	stage('build3') {
                  echo "Building Java files ...."
               }
-     
+     }
       ''')
       sandbox()     
     }
   }
 }
-}
+
 
 /*
 pipelineJob('Testing-job'){
