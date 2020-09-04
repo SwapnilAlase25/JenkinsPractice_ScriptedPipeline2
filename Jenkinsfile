@@ -1,12 +1,29 @@
-/*pipelineJob('Build-Job') {
-    definition {
-        cpsScm {
-            scriptPath(build.groovy)
-	    lightweight(true)
+//Jenkinsfile for seed job
+
+ 
+
+properties([
+    pipelineTriggers([pollSCM('H/5 * * * *')])
+])
+
+ 
+
+node() {
+    timestamps {
+            ansiColor('xterm') {
+                  checkout scm
+            
+            jobDsl ignoreExisting: true, 
+                additionalClasspath: 'utils', 
+                lookupStrategy: 'SEED_JOB', targets: ['build.groovy'].join('\n')
         }
     }
-}*/
+}
 
+
+
+
+/*
 pipelineJob('build-job') {
   definition {
     cps {
@@ -29,7 +46,7 @@ pipelineJob('build-job') {
     }
   }
 }
-
+*/
 
 /*
 pipelineJob('Testing-job'){
