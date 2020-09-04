@@ -1,4 +1,4 @@
-
+/*
 pipelineJob('example') {
     definition {
         cps {
@@ -7,11 +7,11 @@ pipelineJob('example') {
         }
     }
 }
+*/
 
 
-/*
 pipelineJob('Building-job'){
-
+build job: 'build', propagate: true, wait: true
 node {
         stage('build1') {
                  echo "Building C files ...."
@@ -26,7 +26,7 @@ node {
               }
   	 }
 }
-
+/*
 pipelineJob('Testing-job'){
 
 node {
