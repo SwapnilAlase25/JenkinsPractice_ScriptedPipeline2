@@ -1,11 +1,11 @@
-pipelineJob('Build-Job') {
+/*pipelineJob('Build-Job') {
     definition {
         cpsScm {
             scriptPath(build.groovy)
         }
     }
-}
-/*
+}*/
+
 pipelineJob('build-job') {
   definition {
     cps {
@@ -28,7 +28,7 @@ pipelineJob('build-job') {
     }
   }
 }
-*/
+
 
 /*
 pipelineJob('Testing-job'){
