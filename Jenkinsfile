@@ -1,11 +1,26 @@
-pipelineJob('Build-Job') {
+/*pipelineJob('Build-Job') {
     definition {
         cpsScm {
             scriptPath(build.groovy)
 	    lightweight(true)
         }
     }
-}
+}*/
+freeStyleJob('build-job') {
+   node {
+        stage('build1') {
+                 echo "Building C files ...."
+              }
+		
+	stage('build2') {
+                 echo "Building C++ files ...."            
+        	}
+		
+	stage('build3') {
+                 echo "Building Java files ...."
+              }
+     }
+ }
 /*
 pipelineJob('build-job') {
   definition {
