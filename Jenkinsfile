@@ -13,9 +13,10 @@ node() {
             ansiColor('xterm') {
                   checkout scm
             
-            jobDsl ignoreExisting: 'true', 
-                additionalClasspath: 'utils', 
-                lookupStrategy: 'SEED_JOB', targets: 'jobs/build_job.groovy'
+            jobDsl ignoreExisting: true, 
+                //additionalClasspath: 'utils', 
+                lookupStrategy: 'SEED_JOB',
+                targets: 'jobs/build_job.groovy'
         }
     }
 }
