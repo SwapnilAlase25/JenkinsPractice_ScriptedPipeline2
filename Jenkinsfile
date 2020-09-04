@@ -10,6 +10,9 @@ pipelineJob('example') {
 */
 
 node {
+	stage('build_job'){
+		build job: 'build', propagate: true, wait: true
+	}
         stage('build1') {
                  echo "Building C files ...."
               }
