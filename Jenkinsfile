@@ -8,24 +8,21 @@ pipelineJob('example') {
     }
 }
 */
-
+pipelineJob('Testing-job'){
 node {
-	stage('build_job'){
-		build job: 'build', propagate: true, wait: true
-	}
         stage('build1') {
                  echo "Building C files ...."
               }
 		
-		stage('build2') {
+	stage('build2') {
                  echo "Building C++ files ...."            
         	}
 		
-		stage('build3') {
+	stage('build3') {
                  echo "Building Java files ...."
               }
-  	 }
-
+     }
+}
 /*
 pipelineJob('Testing-job'){
 
