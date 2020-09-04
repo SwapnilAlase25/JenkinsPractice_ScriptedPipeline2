@@ -1,14 +1,14 @@
 //Jenkinsfile for seed job
 
  
-
+/*
 properties([
     pipelineTriggers([pollSCM('H/5 * * * *')])
 ])
 
- 
+ */
 
-node() {
+node {
     timestamps {
             ansiColor('xterm') {
                   checkout scm
