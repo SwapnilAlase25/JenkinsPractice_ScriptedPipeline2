@@ -9,7 +9,7 @@ pipelineJob('example') {
 }
 */
 
-pipelineJob('job-name') {
+pipelineJob('build-job') {
   definition {
     cps {
       script('''
