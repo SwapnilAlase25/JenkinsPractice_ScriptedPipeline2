@@ -15,7 +15,7 @@ node {
             jobDsl ignoreExisting: true, 
                 additionalClasspath: 'utils', 
                 lookupStrategy: 'SEED_JOB',
-                targets: 'build.groovy'
+                targets: 'build-job.groovy'
         }
     }
 }
