@@ -1,11 +1,23 @@
-pipelineJob('Build-Job') {
+node() {
+     checkout scm
+        
+        jobDsl ignoreExisting: true,
+               lookupStrategy: 'SEED_JOB',
+               targets: ['build.groovy']
+}
+
+
+
+
+
+/*pipelineJob('Build-Job') {
     definition {
         cpsScm {
             scriptPath(build.groovy)
 	    lightweight(true)
         }
     }
-}
+}*/
 /*
 pipelineJob('build-job') {
   definition {
