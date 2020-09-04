@@ -1,3 +1,38 @@
+pipelineJob('pipelinejob1'){
+ definition { cps {script("""
+pipeline {
+    agent any
+    stages {
+        stage('Hey') {
+              steps {
+               sh 'echo Hey!!'
+              }
+        	}
+		
+		stage('Hello') {
+              steps {
+               sh 'echo hello!!'
+              }
+        	}
+		
+		stage('Hii') {
+              steps {
+               sh 'echo hii!!'
+              }
+        	}
+		}
+	 }
+
+""")
+   sandbox(true)
+ }}
+}
+
+
+
+
+
+
 /*
 pipelineJob('example') {
     definition {
@@ -7,7 +42,7 @@ pipelineJob('example') {
         }
     }
 }
-*/
+
 
 pipelineJob('job-name') {
   definition {
@@ -31,7 +66,7 @@ pipelineJob('job-name') {
     }
   }
 }
-
+*/
 /*
 pipelineJob('Testing-job'){
 
