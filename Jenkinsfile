@@ -8,7 +8,7 @@ pipelineJob('example') {
     }
 }
 */
-pipelineJob('Testing-job'){
+pipelineJob('Building-job'){
 node {
         stage('build1') {
                  echo "Building C files ...."
