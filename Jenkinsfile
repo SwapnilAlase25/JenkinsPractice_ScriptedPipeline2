@@ -21,7 +21,7 @@ node {
 }
 */
 
-#!groovy
+//#!groovy
 
 node() {
      checkout scm
