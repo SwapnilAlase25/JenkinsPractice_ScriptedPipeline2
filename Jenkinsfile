@@ -1,10 +1,23 @@
 
-pipelineJob('scriptedpipelinejob1'){
-  triggers {
-    upstream('ScriptedPipeline_with_Git_SCM2', 'SUCCESS')
-  }
-  
-definition { cps {script("""
+
+job('Building-job'){
+
+node {
+        stage('build1') {
+                 echo "Building C files ...."
+              }
+		
+		stage('build2') {
+                 echo "Building C++ files ...."            
+        	}
+		
+		stage('build3') {
+                 echo "Building Java files ...."
+              }
+  	 }
+}
+
+job('Testing-job'){
 
 node {
         stage('test1') {
@@ -19,19 +32,11 @@ node {
                  echo "Testing Java files ...."
               }
   	 }
-
-
-""")
-   
- }}
 }
 
-pipelineJob('scriptedpipelinejob2'){
-  triggers {
-    upstream('ScriptedPipeline_with_Git_SCM2', 'SUCCESS')
-  }
-  
-definition { cps {script("""
+
+
+job('Deloying-job'){
 
 node {
         stage('deploy1') {
@@ -46,31 +51,4 @@ node {
                  echo "Deploying Java files ...."
               }
   	 }
-""")
-               
-  }}
-}
-
-pipelineJob('scriptedpipelinejob3'){
-  triggers {
-    upstream('ScriptedPipeline_with_Git_SCM2', 'SUCCESS')
-  }
-  
-definition { cps {script("""
-node {
-        stage('deploy1') {
-                 echo "Deploying C files ...."
-              }
-		
-		stage('deploy2') {
-                 echo "Deploying C++ files ...."            
-        	}
-		
-		stage('deploy3') {
-                 echo "Deploying Java files ...."
-              }
-  	 }
-""")
-               
- }}
 }
