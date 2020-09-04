@@ -1,14 +1,11 @@
-/*
-pipelineJob('example') {
+pipelineJob('Build-Job') {
     definition {
-        cps {
-            script(readFileFromWorkspace('build.groovy'))
-            sandbox()
+        cpsScm {
+            scriptPath(build.groovy)
         }
     }
 }
-*/
-
+/*
 pipelineJob('build-job') {
   definition {
     cps {
@@ -31,7 +28,7 @@ pipelineJob('build-job') {
     }
   }
 }
-
+*/
 
 /*
 pipelineJob('Testing-job'){
