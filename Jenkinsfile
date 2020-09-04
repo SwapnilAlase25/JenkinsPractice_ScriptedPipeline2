@@ -9,9 +9,6 @@ pipelineJob('example') {
 }
 */
 
-
-pipelineJob('Building-job'){
-build job: 'build', propagate: true, wait: true
 node {
         stage('build1') {
                  echo "Building C files ...."
@@ -25,7 +22,7 @@ node {
                  echo "Building Java files ...."
               }
   	 }
-}
+
 /*
 pipelineJob('Testing-job'){
 
