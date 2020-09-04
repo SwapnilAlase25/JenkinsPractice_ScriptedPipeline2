@@ -1,5 +1,15 @@
 
+pipelineJob('example') {
+    definition {
+        cps {
+            script(readFileFromWorkspace('build.groovy'))
+            sandbox()
+        }
+    }
+}
 
+
+/*
 pipelineJob('Building-job'){
 
 node {
@@ -52,3 +62,4 @@ node {
               }
   	 }
 }
+*/
