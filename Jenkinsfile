@@ -26,7 +26,7 @@ pipelineJob('job-name') {
                  echo "Building Java files ...."
               }
      }
-      '''.stripIndent())
+      ''')
       sandbox()     
     }
   }
