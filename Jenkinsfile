@@ -1,5 +1,6 @@
 //Jenkinsfile for seed job
 
+ 
 
 properties([
     pipelineTriggers([pollSCM('H/5 * * * *')])
@@ -7,19 +8,17 @@ properties([
 
  
 
-node {
+node() {
     timestamps {
             ansiColor('xterm') {
                   checkout scm
             
             jobDsl ignoreExisting: true, 
-               // additionalClasspath: 'utils', 
-                lookupStrategy: 'SEED_JOB',
-                targets: 'docs/build_job.groovy'
+                additionalClasspath: 'utils', 
+                lookupStrategy: 'SEED_JOB', targets: ['jobs/workflow_release.groovy'].join('\n')
         }
     }
 }
-
 
 //#!groovy
 /*
