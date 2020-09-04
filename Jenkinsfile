@@ -1,6 +1,6 @@
 
 
-job('Building-job'){
+pipelineJob('Building-job'){
 
 node {
         stage('build1') {
@@ -17,7 +17,7 @@ node {
   	 }
 }
 
-job('Testing-job'){
+pipelineJob('Testing-job'){
 
 node {
         stage('test1') {
@@ -36,7 +36,7 @@ node {
 
 
 
-job('Deloying-job'){
+pipelineJob('Deloying-job'){
 
 node {
         stage('deploy1') {
