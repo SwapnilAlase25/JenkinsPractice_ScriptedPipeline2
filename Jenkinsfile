@@ -22,13 +22,5 @@ node() {
     }
 }
 
-/*
-node() {
-     checkout scm
-        
-        jobDsl ignoreExisting: true,
-               lookupStrategy: 'SEED_JOB',
-               targets: 'build.groovy'
-}
-*/
+
 
