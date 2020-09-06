@@ -1,9 +1,8 @@
-//#!/usr/bin/env groovy
 
 try{
 node
 {
-        stage('build1') {
+      		stage('build1') {
                  echo "Building C files ...."
               }
 		
