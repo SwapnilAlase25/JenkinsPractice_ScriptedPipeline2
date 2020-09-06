@@ -16,8 +16,7 @@ node
               }
    }
 }catch(e){
-	//currentBuild.result = 'FAILURE'
-	//sh 'echo "FAILURE CATCHED"'
+	currentBuild.result = 'FAILURE'
 }finally{
 	/*if(!currentBuild.result)
 		currentBuild.result = currentBuild.currentResult*/
