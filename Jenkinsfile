@@ -1,11 +1,11 @@
 //Jenkinsfile for seed job
 
  
-/*
+
 properties([
     pipelineTriggers([pollSCM('H/5 * * * *')])
 ])
-*/
+
  
 
 node() {
