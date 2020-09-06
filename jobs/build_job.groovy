@@ -16,9 +16,10 @@ node()
               }
    }
 }catch(e){
-	currentBuild.result = 'FAILURE'	
+	//currentBuild.result = 'FAILURE'
+	echo "FAILURE CATCHED"
 }finally{
-	if(!currentBuild.result)
-		currentBuild.result = currentBuild.currentResult
+	/*if(!currentBuild.result)
+		currentBuild.result = currentBuild.currentResult*/
 	
 }
