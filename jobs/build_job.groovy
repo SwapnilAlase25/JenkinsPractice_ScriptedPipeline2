@@ -1,4 +1,6 @@
-node {
+
+node
+{
         stage('build1') {
                  echo "Building C files ...."
               }
