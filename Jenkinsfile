@@ -14,7 +14,7 @@ node() {
                   checkout scm
             
             jobDsl ignoreExisting: true, 
-                //additionalClasspath: 'utils', 
+                additionalClasspath: 'utils', 
                 lookupStrategy: 'SEED_JOB',
                 targets: 'jobs/build_job.groovy'
         }
