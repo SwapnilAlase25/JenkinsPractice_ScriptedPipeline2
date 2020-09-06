@@ -1,7 +1,7 @@
 //Jenkinsfile for seed job
 
 
-#!groovy 
+//#!groovy 
 
 properties([
     pipelineTriggers([pollSCM('H/5 * * * *')])
