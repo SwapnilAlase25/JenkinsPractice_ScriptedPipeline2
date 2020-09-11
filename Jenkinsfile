@@ -1,7 +1,5 @@
+
 //Jenkinsfile for seed job
-
-
-//#!groovy 
 
 properties([
     pipelineTriggers([pollSCM('H/5 * * * *')])
@@ -17,7 +15,7 @@ node() {
             jobDsl ignoreExisting: true, 
                 additionalClasspath: 'utils', 
                 lookupStrategy: 'SEED_JOB',
-                targets: 'jobs/build_job.groovy'
+                targets: targets: ['jobs/build_job.groovy'].join('\n')
         }
     }
 }
