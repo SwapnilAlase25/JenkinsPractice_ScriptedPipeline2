@@ -1,5 +1,5 @@
 
-try{
+//try{
 node
 {
       		stage('build1') {
@@ -14,10 +14,11 @@ node
                  echo "Building Java files ...."
               }
    }
-}catch(e){
+/*}catch(e){
 	//currentBuild.result = 'FAILURE'
 }finally{
 	/*if(!currentBuild.result)
 		currentBuild.result = currentBuild.currentResult*/
 	
 }
+*/
