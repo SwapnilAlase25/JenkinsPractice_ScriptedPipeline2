@@ -15,7 +15,6 @@ try{
 		      }
 	}
 }catch(e){
-	echo "Build Failed"
 	//currentBuild.result = 'FAILURE'
 }finally{
 	//if(!currentBuild.result)
