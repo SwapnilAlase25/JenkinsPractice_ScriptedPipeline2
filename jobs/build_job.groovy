@@ -6,7 +6,9 @@ node
       		stage('build1') {
                  echo "Building C files ...."
               }
-	   }	
+	} catch(e){
+		echo "Building C files Failed"	
+	}		
 		stage('build2') {
                  echo "Building C++ files ...."            
         	}
