@@ -17,8 +17,8 @@ node
 /*}catch(e){
 	//currentBuild.result = 'FAILURE'
 }finally{
-	/*if(!currentBuild.result)
-		currentBuild.result = currentBuild.currentResult*/
+	if(!currentBuild.result)
+		currentBuild.result = currentBuild.currentResult
 	
 }
 */
