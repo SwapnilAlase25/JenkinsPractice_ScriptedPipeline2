@@ -1,20 +1,19 @@
 
 try{
-node
-{
-	
-      		stage('build1') {
-                 echo "Building C files ...."
-              }
-			
+	node
+	{
+		stage('build1') {
+			 echo "Building C files ...."
+		      }
+
 		stage('build2') {
-                 echo "Building C++ files ...."            
-        	}
-		
+			 echo "Building C++ files ...."            
+			}
+
 		stage('build3') {
-                 echo "Building Java files ...."
-              }
-   }
+			 echo "Building Java files ...."
+		      }
+	}
 }catch(e){
 	currentBuild.result = 'FAILURE'
 }finally{
