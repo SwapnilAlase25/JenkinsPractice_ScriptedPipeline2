@@ -2,10 +2,11 @@
 //try{
 node
 {
+	try{
       		stage('build1') {
                  echo "Building C files ...."
               }
-		
+	   }	
 		stage('build2') {
                  echo "Building C++ files ...."            
         	}
